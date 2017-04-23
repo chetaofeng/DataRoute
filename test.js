@@ -14,6 +14,11 @@ async function ab() {
 
 ab();
 */
-setInterval(function(){
-	console.log('haha')
-},1000)
+
+
+console.log( new Date().getTime())
+//().toLocaleTimeString()
+//
+// setInterval(function(){
+// 	console.log('haha')
+// },1000)

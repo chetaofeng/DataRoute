@@ -35,7 +35,6 @@ exports.center = function (req, res) {
     })
   }
 
-
   //创建文本文件
   CreateTransFile().then(function () {
     //console.log('所有步骤执行成功...')
@@ -43,4 +42,16 @@ exports.center = function (req, res) {
     //console.log('捕捉1错误号:' + err)
   })
 
+}
+
+
+exports.centerdown = function (req,res) {
+    //获取Post数据
+    var data = req.body
+
+    //获取表名称及版本号
+
+    //比较表名称及版本号，如果客户端版本号小，则下载，否则啥也不敢
+
+    //
 }
