@@ -16,21 +16,27 @@ var pool = mysql.createPool(
 );
 
 
-//全表下载文件列表kkkkk
-var tableList = ['T_SECU_ROLE',
-    'T_SECU_FUNCTIONS',
-    'T_CARD_DISCOUNT_INFOR',
-    'T_COMM_NODE',
-    'T_COMM_ORGAN',
-    'T_COMM_ROAD',
-    'T_DICT_VEHICLE_CASE',
-    'T_SPEED_LIMIT',
-    'T_WEIGHT_PARAM',
-    'TBL_VEHICLE_BLACK'
+//全表下载文件列表
+var tableList = [{TABLENAME:'T_SECU_ROLE',DATAROUTE:'000011',DATAMETHOD:1},
+    {TABLENAME:'T_SECU_FUNCTIONS',DATAROUTE:'000011',DATAMETHOD:1},
+    {TABLENAME:'T_CARD_DISCOUNT_INFOR',DATAROUTE:'000011',DATAMETHOD:1},
+    {TABLENAME:'T_COMM_NODE',DATAROUTE:'000011',DATAMETHOD:1},
+    {TABLENAME:'T_COMM_ORGAN',DATAROUTE:'000011',DATAMETHOD:1},
+    {TABLENAME:'T_COMM_ROAD',DATAROUTE:'000011',DATAMETHOD:1},
+    {TABLENAME:'T_DICT_VEHICLE_CASE',DATAROUTE:'000011',DATAMETHOD:1},
+    {TABLENAME:'T_SPEED_LIMIT',DATAROUTE:'000011',DATAMETHOD:1},
+    {TABLENAME:'T_WEIGHT_PARAM',DATAROUTE:'000011',DATAMETHOD:1},
+    {TABLENAME:'TBL_VEHICLE_BLACK',DATAROUTE:'000011',DATAMETHOD:1}
 ]
+
+
+
+
 
 //临时变量，保存当前生成的下发文件名
 var tableName
+var tableRoute
+var tableMethod
 //临时变量，保存当前生成的文件下标
 var index = -1
 
@@ -42,7 +48,8 @@ var getFirstFile = function () {
         if (index == tableList.length) {
             index = 0
         }
-        tableName = tableList[index]
+        tableName = tableList[index].TABLENAME
+
         resolve()
     })
 }
@@ -105,7 +112,8 @@ var getDownLoad = function () {
                                     TABLENAME: tableName,
                                     TOTAL:results.length,
                                     VERSION: parseInt(ver) + 1,
-                                    DATAROUTE:'1111111',
+                                    DATAROUTE:tableRoute,
+                                    DATAMETHOD:tableMethod,
                                     ROWS:results
                                 }
 
@@ -155,14 +163,3 @@ var bg = function () {
 bg()
 
 
-// var js = [{name:'wtq1',age:33},
-//     {name:'wtq2',age:33},
-//     {name:'wtq3',age:33},
-//     {name:'wtq4',age:33},
-//     {name:'wtq5',age:33},
-//     {name:'wtq6',age:33},
-//     {name:'wtq7',age:33}
-// ]
-//
-//
-// console.log(js)

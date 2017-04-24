@@ -21,21 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="station_gen_download.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/station_gen_download.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-900">
-              <caret line="33" column="46" lean-forward="false" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="center_gen_download.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="center_gen_download.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/center_gen_download.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="-961">
+              <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -44,8 +34,28 @@
       <file leaf-file-name="subcenter_gen_download.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/subcenter_gen_download.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="135">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="station_gen_download.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/station_gen_download.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="30" column="52" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="34" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -70,7 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/station_sendtransstatus.js" />
         <option value="$PROJECT_DIR$/public/centeroracle/21_29187_105_1781999754_20170329162710.data" />
         <option value="$PROJECT_DIR$/oracle.js" />
         <option value="$PROJECT_DIR$/center_req_oracle.js" />
@@ -118,9 +127,10 @@
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/center_req.js" />
         <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/center_gen_download.js" />
         <option value="$PROJECT_DIR$/station_gen_download.js" />
         <option value="$PROJECT_DIR$/subcenter_gen_download.js" />
+        <option value="$PROJECT_DIR$/center_gen_download.js" />
+        <option value="$PROJECT_DIR$/README.txt" />
       </list>
     </option>
   </component>
@@ -287,12 +297,12 @@
       <workItem from="1492316626745" duration="2593000" />
       <workItem from="1492350354996" duration="1320000" />
       <workItem from="1492827786158" duration="2758000" />
-      <workItem from="1492831853301" duration="17295000" />
+      <workItem from="1492831853301" duration="18652000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154230000" />
+    <option name="totallyTimeSpent" value="155587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -375,7 +385,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/station_sendtransstatus.js" />
     <entry file="file://$PROJECT_DIR$/station_savetocenmongodb.js" />
     <entry file="file://$PROJECT_DIR$/station_processIncome.js" />
     <entry file="file://$PROJECT_DIR$/station_savetocenter.js" />
@@ -619,24 +628,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/station_gen_download.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
-          <caret line="33" column="46" lean-forward="false" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/subcenter_gen_download.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        <state relative-caret-position="300">
+          <caret line="30" column="52" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="34" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/center_gen_download.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="-961">
+          <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subcenter_gen_download.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding />
         </state>
       </provider>
