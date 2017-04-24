@@ -16,7 +16,7 @@ var pool = mysql.createPool(
 );
 
 
-//全表下载文件列表
+//全表下载文件列表kkkkk
 var tableList = ['T_SECU_ROLE',
     'T_SECU_FUNCTIONS',
     'T_CARD_DISCOUNT_INFOR',
