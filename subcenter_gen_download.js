@@ -14,20 +14,23 @@ var pool = mysql.createPool(
 );
 
 //生成黑名单列表
-var tableList = ['T_SECU_USER',
-    'T_CARD_STOCK',
-    'T_CARD_CIRCULATION',
-    'T_CARD_PRECOD',
-    'T_CARD_RECOVER',
-    'T_COMM_ROAD',
-    'T_DICT_VEHICLE_CASE',
-    'T_SPEED_LIMIT',
-    'T_WEIGHT_PARAM',
-    'TBL_VEHICLE_BLACK'
+var tableList = [
+    {TABLENAME:'T_SECU_USER',DATAROUTE:'111111',DATAMETHOD:1},
+    {TABLENAME:'T_CARD_STOCK',DATAROUTE:'111111',DATAMETHOD:1},
+    {TABLENAME:'T_CARD_CIRCULATION',DATAROUTE:'111111',DATAMETHOD:1},
+    {TABLENAME:'T_CARD_PRECOD',DATAROUTE:'111111',DATAMETHOD:1},
+    {TABLENAME:'T_CARD_RECOVER',DATAROUTE:'111111',DATAMETHOD:1},
+    {TABLENAME:'T_COMM_ROAD',DATAROUTE:'111111',DATAMETHOD:1},
+    {TABLENAME:'T_DICT_VEHICLE_CASE',DATAROUTE:'111111',DATAMETHOD:1},
+    {TABLENAME:'T_SPEED_LIMIT',DATAROUTE:'111111',DATAMETHOD:1},
+    {TABLENAME:'T_WEIGHT_PARAM',DATAROUTE:'111111',DATAMETHOD:1},
+    {TABLENAME:'TBL_VEHICLE_BLACK',DATAROUTE:'111111',DATAMETHOD:1}
 ]
 
 
 var tableName
+var tableRoute
+var tableMethod
 //tableName='node_user'
 var index = -1
 
@@ -38,7 +41,8 @@ var getFirstFile = function () {
         if (index == tableList.length) {
             index = 0
         }
-        tableName = tableList[index]
+        tableName = tableList[index].TABLENAME
+        tabl
         resolve()
     })
 }
@@ -57,7 +61,7 @@ var getDownLoad = function () {
             }
 
             //查表
-            var query = connection.query('select count(*) as cnt from node_user',// + tableName,
+            connection.query('select count(*) as cnt from node_user',// + tableName,
                 function (err, results, fields) {
                     if (err) {
                         reject(-2)
@@ -68,7 +72,7 @@ var getDownLoad = function () {
                     if (results[0].cnt > 0) {
 
                         //将所有待传数据设置为-1
-                        var query1 = connection.query('update node_user set transtag=-1',//+ tableName,
+                        connection.query('update node_user set transtag=-1',//+ tableName,
                             function (err, results, fields) {
                                 if (err) {
                                     reject(-3)
@@ -81,7 +85,7 @@ var getDownLoad = function () {
                                 //取出所有为1的数据
                                 var sql3 = 'select * from  node_user where transtag=-1'
 
-                                var query4 = connection.query(sql3,
+                                connection.query(sql3,
                                     function (err, results, fields) {
                                         if (err) {
                                             reject(-5)
@@ -97,7 +101,8 @@ var getDownLoad = function () {
                                         var result = {
                                             TABLENAME: tableName,
                                             TOTAL: results.length,
-                                            DATAROUTE: '1111111',
+                                            DATAROUTE: tableRoute,
+                                            DATAMETHOD:tableMethod,
                                             ROWS: results
                                         }
 
@@ -107,7 +112,7 @@ var getDownLoad = function () {
                                         //取出所有为1的数据
                                         var sql6 = 'update node_user set transtag = 1  where transtag=-1'
 
-                                        var query6 = connection.query(sql6,
+                                        connection.query(sql6,
                                             function (err, results, fields) {
                                                 if (err) {
                                                     reject(-5)

@@ -118,7 +118,6 @@ var getDownLoad = function () {
                                             reject(-5)
                                         }
 
-
                                         //获取当前版本号
                                         if (fs.existsSync(oldname)) {
                                             fs.unlinkSync(oldname)
@@ -132,8 +131,6 @@ var getDownLoad = function () {
                                         connection.release();
                                         resolve()
                                     })
-
-
 
                             })
                     }
