@@ -44,6 +44,17 @@ exports.center = function (req, res) {
 
 }
 
+//获取特定文件的当前版本号
+var getDownLoadVer = function (fileName) {
+    var kk = fs.readdirSync('./public/centerdownload/version/')
+    var rt = fileName+'.000'
+    for (var item in kk) {
+        if (kk[item].indexOf(fileName) > -1) {
+            rt =kk[item]
+        }
+    }
+    return rt
+}
 
 exports.centerdown = function (req,res) {
     //获取Post数据
@@ -53,14 +64,26 @@ exports.centerdown = function (req,res) {
     //获取表名称及版本号
 
 
+
     //比较表名称及版本号，如果客户端版本号小，则下载，否则啥也不敢
 
-    //
+    //服务器端版本
+    var serverData = getDownLoadVer(data.TABLENAME)
+    console.log('Server:'+serverData+'   Client:'+data.TABLEVERSION)
 
-    var fromdata = './public/centerdownload/T_COMM_ROAD.101'
-    var todata = 'T_COMM_ROAD.110'
-    res.download(fromdata,todata);
+    if(serverData != data.TABLEVERSION)
+    {
+        var fromdata = './public/centerdownload/version/'+serverData
+        var todata = serverData
 
-    //res.json({result:'ok'})
+        console.log('需要下载')
 
+        res.download(fromdata,todata);
+
+    }
+    else
+    {
+        console.log('不需要下载')
+        res.json({result:'ok'})
+    }
 }

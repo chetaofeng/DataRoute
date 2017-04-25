@@ -57,7 +57,7 @@ var getDownLoadVer = function (fileName) {
     return rt
 }
 
-console.log(getDownLoadVer('T_COMM_ROAD'))
+
 
 //中心运行参数下载服务接口
 var senddata = function () {
@@ -68,7 +68,6 @@ var senddata = function () {
                 TABLEVERSION:getDownLoadVer(tableName)
             })
 
-            //console.log(data)
 
             //设置参数
             var opt = {
@@ -116,15 +115,16 @@ var senddata = function () {
                 res.on('data', function (chunk) {
                     if(head=='application/octet-stream') {
                         file.write(chunk);
+                        file1.write(chunk);
                     }
                 });
                 res.on('end', function () {
                     if(head=='application/octet-stream') {
                         file.end();
-                       // fs.
+                        file1.end();
                     }
 
-                    console.log('okaaa')
+                    //console.log('okaaa')
                     resv()
                 });
             });

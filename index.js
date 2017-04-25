@@ -11,6 +11,15 @@ var exec = require('child_process').exec
 var config = require('./config')
 var bodyParser=require('body-parser')
 
+var check = require('./app')
+
+
+
+//检查文件夹是否存在，如果不存在则创建
+//也包括创建一些传输标示文件，根据config.js中的描述
+check.sysCheck()
+
+
 //模拟车道产生数据
 //var LanePost = require('./lane_post_test_data')
 

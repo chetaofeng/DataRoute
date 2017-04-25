@@ -39,7 +39,7 @@ var getFirstFile = function () {
             index = 0
         }
         tableName = tableList[index].TABLENAME
-        tabl
+
         resolve()
     })
 }

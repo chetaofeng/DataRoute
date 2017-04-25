@@ -9,7 +9,6 @@ var Center = require('./center_req')
 // var Center_Image = require('./center_req_image')
 // var Center_TransMonitor = require('./center_req_transmonitor')
 
-
 module.exports = function(app) {
   //站级路由
   //上传数据
