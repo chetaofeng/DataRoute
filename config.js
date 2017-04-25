@@ -82,7 +82,7 @@ module.exports = {
     url: 'mongodb://192.168.1.115:27017/enc_center'
   },
   cen_host:{
-    host: '192.168.1.115',
+    host: '192.168.1.110',
     port: 3000
   },
   up_host: {

@@ -15,31 +15,31 @@ var bodyParser=require('body-parser')
 //var LanePost = require('./lane_post_test_data')
 
 //站级分拣数据
-var StationProcess = require('./station_process_Income')
-//站级插入本地数据库
-var StationInsertMySQL = require('./station_insert_mysql')
-//站级续传到分中心
-var StationInsertSub = require('./station_saveto_subcenter')
-//站级续传到总中心
-var StationInsertCenter = require('./station_saveto_center')
-
-
-//分中心拣数据
-var SubCenterProcess = require('./subcenter_processIncome')
-
-var SubCenterInsertMySQL = require('./subcenter_insert_mysql')
-
-
-//中心分拣服务
-var CenterProcess = require('./center_processIncome')
-
-var CenterInsertMySQL = require('./center_insert_mysql')
+// var StationProcess = require('./station_process_Income')
+// //站级插入本地数据库
+// var StationInsertMySQL = require('./station_insert_mysql')
+// //站级续传到分中心
+// var StationInsertSub = require('./station_saveto_subcenter')
+// //站级续传到总中心
+// var StationInsertCenter = require('./station_saveto_center')
 //
- var CenterInsertMSSQL = require('./center_insert_mssql')
 //
-var CenterInsertMongoDB = require('./center_insert_mongo')
+// //分中心拣数据
+// var SubCenterProcess = require('./subcenter_processIncome')
 //
- var CenterInsertOracle = require('./center_insert_oracle')
+// var SubCenterInsertMySQL = require('./subcenter_insert_mysql')
+//
+//
+// //中心分拣服务
+// var CenterProcess = require('./center_processIncome')
+//
+// var CenterInsertMySQL = require('./center_insert_mysql')
+// //
+//  var CenterInsertMSSQL = require('./center_insert_mssql')
+// //
+// var CenterInsertMongoDB = require('./center_insert_mongo')
+//
+// var CenterInsertOracle = require('./center_insert_oracle')
 //
 
 

@@ -30,7 +30,10 @@ module.exports = function(app) {
   //中心路由
   //上传数据
   app.post('/center',Center.center)
-  // app.post('/center', Center_Oracle.center_oracle)
+  app.post('/centerdown',Center.centerdown)
+    app.get('/centerdown',Center.centerdown)
+
+    // app.post('/center', Center_Oracle.center_oracle)
 //
  // app.get('/c_img',Station.img)
 
