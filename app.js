@@ -17,6 +17,9 @@ exports.sysCheck=function () {
         console.log('存在')
     }
 
+    sdfsdfsdfdsf是多福多寿
+
+      水电费水电费水电费说
 
     /111111111
 
