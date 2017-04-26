@@ -2,6 +2,8 @@
  * Created by apple on 2017/4/25.
  */
 
+////////sssss
+
 var fs = require('fs')
 
 exports.sysCheck=function () {
