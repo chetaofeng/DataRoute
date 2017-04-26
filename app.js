@@ -16,9 +16,9 @@ exports.sysCheck=function () {
     else {
         console.log('存在')
     }
-}
 
 
+    /111111111
 
 ////6666666666666
 //777
